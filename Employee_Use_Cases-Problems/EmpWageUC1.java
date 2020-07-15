@@ -5,6 +5,8 @@ public class EmpWageUC1 {
 	public void emp() {
 		//double empCheck=Math.random()* (max - min + max) + min;
 		//System.out.println(empCheck);
+		
+		//finding Employee is present or not
 		Random rand=new Random();
 		int empCheck=rand.nextInt(2);
 		System.out.println("Random: no is "+empCheck);
@@ -19,6 +21,7 @@ public class EmpWageUC1 {
 	}
 
 	public static void main(String[] args) {
+		//calling object
 		EmpWageUC1 a=new EmpWageUC1();
 		a.emp();
 

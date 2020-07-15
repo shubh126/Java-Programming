@@ -1,15 +1,21 @@
 import java.util.Random;
 public class EmpWageUC7 {
-	private static final int maxHrsInMonth=100;
-	private static final int workingDays=20;
-	private static final int empWagePerHr=20;
+	
+	//Constants
+	private static final int MAXHRSINMONTH=100;
+	private static final int WORKINGDAYS=20;
+	private static final int EMPWAGEPERHR=20;
 	
 	public void emp() {
+		
+		//local Variables
 		int totalEmpHrs=0;
 		int totalWorkingDays=0;
 		int totalSalary=0;
 		int empHrs=0;
-		while (totalEmpHrs < maxHrsInMonth && totalWorkingDays < workingDays)
+		
+		//Calculation
+		while (totalEmpHrs < MAXHRSINMONTH && totalWorkingDays < WORKINGDAYS)
 		{
 			totalWorkingDays++;
 			Random rand=new Random();
@@ -27,12 +33,14 @@ public class EmpWageUC7 {
 			}
 			totalEmpHrs=totalEmpHrs+empHrs;
 			System.out.println("Day: "+totalWorkingDays+" Total Working Hours: "+totalEmpHrs);
-			totalSalary=totalEmpHrs*empWagePerHr;
+			totalSalary=totalEmpHrs*EMPWAGEPERHR;
 			System.out.println("Total salary: "+totalSalary);
 		}
 	}
 
 	public static void main(String[] args) {
+		
+		//calling method via Object
 		EmpWageUC7 a=new EmpWageUC7();
 		a.emp();
 
