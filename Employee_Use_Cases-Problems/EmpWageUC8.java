@@ -1,12 +1,14 @@
-
 import java.util.Random;
 
 public class EmpWageUC8 {
+	
+	//final global Variables
 	private final String company;
 	private final int empRatePerHr;
 	private final int workingDays;
 	private final int maxHrsInMonth;
 	
+	//Constructor
 	private EmpWageUC8(String company,int empRatePerHr,int workingDays,int maxHrsInMonth) {
 		this.company=company;
 		this.empRatePerHr=empRatePerHr;
@@ -14,7 +16,10 @@ public class EmpWageUC8 {
 		this.maxHrsInMonth=maxHrsInMonth;  
 	}
 	
+	//Calculations
 	private int computeWage() {
+		
+		//local Variables
 		int totalEmpHrs=0;
 		int totalWorkingDays=0;
 		int totalSalary=0;
@@ -44,8 +49,11 @@ public class EmpWageUC8 {
 	}
 
 	public static void main(String[] args) {
+		//Object for Euronet Company
 		EmpWageUC8 euronet=new EmpWageUC8("Euronet",20,20,100);
 		System.out.println("Total EMployee wage for company:"+euronet.company+" is: "+euronet.computeWage());
+		
+		//Object for TCS Company
 		EmpWageUC8 tcs=new EmpWageUC8("TCS",20,25,100);
 		System.out.println("Total EMployee wage for company:"+tcs.company+" is: "+tcs.computeWage());
 

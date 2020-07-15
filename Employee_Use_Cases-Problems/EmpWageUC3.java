@@ -2,28 +2,32 @@ import java.util.Random;
 public class EmpWageUC3 {
 	 //int max=1;
 	 //int min=0;
-	int empWagePerHr=20;
-	int workingHrsF=8;
-	int workingHrsP=4;
-	int empDailyWage;
+	
+	//Constants
+	private static final int EMPWAGEPERHR=20;
+	private static final int WORKINGHRSF=8;
+	private static final int WORKINGHRSP=4;
 	public void emp() {
-	     //double empCheck=Math.floor(Math.random()*10)%2;
+		int empDailyWage; //local variable
+		
+		//Calculation for FullTime & PartTime
+	    //double empCheck=Math.floor(Math.random()*10)%2;
 		Random rand=new Random();
 		int empCheck=rand.nextInt(3);
 		System.out.println("Random: no is "+empCheck);
 		if(empCheck == 1) {
 			System.out.println("This is FUll Time Employee");
-			empDailyWage=(empWagePerHr*workingHrsF);
+			empDailyWage=(EMPWAGEPERHR*WORKINGHRSF);
 			System.out.println("Daliy wage of Full Time Employee is: "+empDailyWage+" Rs");
 		}
 		else if(empCheck == 2) {
 			System.out.println("This is PART Time Employee");
-			empDailyWage=(empWagePerHr*workingHrsP);
+			empDailyWage=(EMPWAGEPERHR*WORKINGHRSP);
 			System.out.println("Daliy wage of Part Time Employee is: "+empDailyWage+" Rs");
 		}
 		else {
 			System.out.println("Employee is absent");
-			empDailyWage=(empWagePerHr*0);
+			empDailyWage=(EMPWAGEPERHR*0);
 			System.out.println("Daliy wage of Employee is: "+empDailyWage+" Rs");
 		}
 		
@@ -31,6 +35,7 @@ public class EmpWageUC3 {
 	}
 
 	public static void main(String[] args) {
+		//Calling Method via Object
 		EmpWageUC3 a=new EmpWageUC3();
 		a.emp();
 
